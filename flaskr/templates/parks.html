@@ -61,28 +61,30 @@
        <!-- services section start -->
        <div class="services_section layout_padding">
            <div class="container">
-               <h1 class="services_taital">Activities</h1>
-               <p class="services_text">Choose the ones that please you</p>
+               <h1 class="services_taital">Parks</h1>
+               <p class="services_text">Please choose one park that interests you the most</p>
                <div class="services_section_2">
                    <div class="row">
-                       {% for activity in activities %}
-                       <div class="btn_main"><a href="#" onclick="toggleButtonColor(this, '{{ activity }}','activities'); return false;">{{ activity }}</a></div>
+                       {% for park in parks %}
+                       <div class="btn_main">
+                           <a href="#" name ="park" onclick="toggleButtonOne(this, '{{ park }}', 'park'); return false;">{{ park }}</a>
+                       </div>
                        {% endfor %}
                    </div>
                </div>
-               <h1 class="services_taital">Amenities</h1>
-               <p class="services_text">Choose the ones that please you</p>
+               <h1 class="services_taital">Hours</h1>
+               <p class="services_text">Choose how many hours that you would like to hike per day</p>
                <div class="services_section_2">
                    <div class="row">
-                       {% for amenity in amenities %}
-                       <div class="btn_main"><a href="#" onclick="toggleButtonColor(this, '{{ amenity }}', 'amenities'); return false;">{{ amenity }}</a></div>
+                       {% for hour in hours %}
+                       <div class="btn_main"><a href="#" name ="hours" onclick="toggleButtonOne(this, '{{ hour }}', 'hours'); return false;">{{ hour }}</a></div>
                        {% endfor %}
                    </div>
                </div>
            </div>
        </div>
 
-       <div class="send_btn"><a href="/parks">Start my Wander</a></div>
+       <div class="send_btn"><a href="/poi">See my points of interest</a></div>
 
 
 

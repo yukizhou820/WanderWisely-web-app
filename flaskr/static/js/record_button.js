@@ -18,3 +18,15 @@ function toggleButtonColor(button,input,type) {
     }
     recordButton(input, type);
 }
+
+function toggleButtonOne(button, input, type) {
+    // Remove the "selected" class from all buttons in the group
+    var buttons = document.getElementsByName(type);
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove('active');
+    }
+    // Add the "selected" class to the clicked button
+    button.classList.add('active')
+
+    recordButton(input, type);
+}
